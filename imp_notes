@@ -1,0 +1,16 @@
+Loss functions and their representations in numpy /tensorflow
+
+
+1) Huber Loss
+ Semantics - https://en.wikipedia.org/wiki/Huber_loss
+ Usage - Used in Deep Q Learning
+ Good link - https://www.reddit.com/r/MachineLearning/comments/6dmzdy/d_on_using_huber_loss_in_deep_qlearning/
+
+ Tensorflow representation
+    tf.select(tf.abs(x) < 1.0,
+            0.5 * tf.square(x),
+            tf.abs(x) - 0.5) # condition, true, false
+
+
+2) L1 vs L2 loss
+Good link - http://rishy.github.io/ml/2015/07/28/l1-vs-l2-loss/
